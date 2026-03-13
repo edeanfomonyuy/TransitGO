@@ -8,31 +8,27 @@
 </head>
 <body>
     <main>
-
-
-        <img src="/assets/images/image13.jpg" alt="image" height="300px" width="500px">
-
-        <div class="cont">
-        
-            <label for="name">Name:</label>
-                
-            <input type="text" id="id" name="name" placeholder="enter your name" style="width: 20%;"><br><br>
-            
-            <!-- <label for="name">sureName:</label>
-        
-            <input type="text" id="id" name="surename" placeholder="enter your surename" style="width: 24%;" ><br><br>
-             -->
-            <label for="NUMBER"><img src="/assets/images/icon.jpg" alt="" style="width: 20px; height: 15px;">Call</label>
-            
-            <input type="text" id="contact" name="contact" placeholder="enter contact" style="width: 20%;"><br><br>
-      
-
+        <div class="image-container">
+            <img src="../assets/images/image13.jpg" alt="Bus images" />
         </div>
-        <button>Login</button>
-        
-
-    </main>
+        <form action="">
+            <h1>Sign In Form</h1>
+            <div class="input-group">
+                <label for="email"></label>
+                <input id="email" type="email" placeholder="Email address">
+            </div>
+            <div class="input-group">
+                <label for="password"></label>
+                <input id="password" type="password" placeholder="Password">
+            </div>
+            <div class="checkbox-group">
+                <input id="terms-conditions" type="checkbox" >
+                <label for="terms-conditions">Agree Terms & Conditions</label>
+            </div>
     
+            <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+    </main>
     
 </body>
 </html>
