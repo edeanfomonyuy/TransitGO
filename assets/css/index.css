@@ -4,13 +4,11 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(228, 248, 228);
-    background-image: url('bus13.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    color: white;
+body{
+    background-color: black;
+    border-radius: 10PX
+    
+
 }
 
 .card-container {
@@ -21,7 +19,7 @@ body {
 }
 
 .card{
-    background-color: gray;
+    background-color: whitesmoke;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -61,7 +59,7 @@ body {
 
 .card-location{
     font-weight: bold;
-    color: #868686;
+    color: #050505;
 }
 
 .card-info{
@@ -71,7 +69,7 @@ body {
 }
 
 .info-item {
-    color: #868686;
+    color: #080101;
 }
 
 .card-footer {
@@ -89,12 +87,13 @@ body {
     border-radius: 8px;
 }
 img {
-    width: 100vw;
-    height: 300px;
-    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     opacity: 10;
+    border-top: 20px;
 
 }
 .bus-type {
