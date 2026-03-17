@@ -62,3 +62,6 @@ nav li a:hover{
     color: blue;
     transition: 0.4s ease 0s;
 }
+@media(max-width:768px){
+    
+}
