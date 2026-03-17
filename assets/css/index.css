@@ -114,3 +114,35 @@ img {
     text-decoration: none;
     border-radius: 8px;
 }
+.head-image{
+    position: relative;
+    width: 100%;
+    align-items: center;
+}
+.hero-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: ;
+
+}
+
+.search-bar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -1000%);
+    z-index: 10;
+}
+.search-bar input{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.search-bar button{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #222222;
+    color: white;
+}
