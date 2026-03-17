@@ -6,18 +6,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+  
 </head>
-<body>
+<body class="home">
     <header>
         <nav>
             <div class="logo">
                 <p>TransitGo</p>
             </div>
             <ul>
-                <li><a href="home page">Home</a></li>
-                <li><a href="about.html">About Us</a></li> 
-                <li><a href="contact.html">Contact Us</a></li>          
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
        
@@ -29,12 +30,13 @@
             <div class="pic-bar">
                 <div class="head image">
                     <img src="/assets/images/image11.jpg" alt="bus">
-                    <span class="search-bar">
-                        <search>
+                    <div class="hero-overlay">
+                        <h1 class="hero-title">TransitGO</h1>
+                        <div class="search-bar">
                             <input type="search" placeholder="Search agency...">
-                            <button type="submit">search</button>
-                            </search>
-                    </span>
+                            <button type="button" class="search-btn">Search</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -250,7 +252,71 @@
                 
             </div>
         </section>
+        
+        
     </main>
+    <div class="map-form-container">
+        <div class="form-box">
+            <h3>Book Your Trip</h3>
+            <form>
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" placeholder="Departure city">
+                
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" placeholder="Destination city">
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                
+                <button type="submit">Search Buses</button>
+            </form>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7266656147385!2d9.670752374007945!3d4.075996895897747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106113cbdfa67ce7%3A0x19711a523bd1978c!2sDk%20Hotel!5e0!3m2!1sen!2scm!4v1773745278756!5m2!1sen!2scm"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <!-- Booking modal -->
+    <div class="booking-modal" aria-hidden="true">
+        <div class="booking-modal__content">
+            <button class="booking-modal__close" aria-label="Close">×</button>
+            <h2>Book your seat</h2>
+
+            <form class="booking-form">
+                <label>
+                    Your name
+                    <input type="text" name="customerName" placeholder="Enter your name" required>
+                </label>
+
+                <label>
+                    Seat count
+                    <select name="seatCount" required>
+                        <option value="70">70 seats</option>
+                        <option value="80">80 seats</option>
+    </select>
+                </label>
+
+                <label>
+                    Payment method
+                    <select name="paymentMethod" required>
+                        <option value="">Choose payment</option>
+                        <option value="MTN">MTN</option>
+                        <option value="ORANGE">ORANGE</option>
+                        <option value="AFRILAND">AFRILAND FIRST BANK</option>
+                        <option value="CREDIT_UNION">CREDIT UNION</option>
+                    </select>
+                </label>
+
+                <label>
+                    Travel time
+                    <input type="time" name="travelTime" required>
+                </label>
+
+                <button type="submit" class="booking-modal__confirm">Confirm booking</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div id="grid">
             <div id="contact">
@@ -284,6 +350,43 @@
     </div>
 </div> 
     </footer>   
-    
+
+    <script>
+        const modal = document.querySelector('.booking-modal');
+        const openButtons = document.querySelectorAll('.book-now-btn');
+        const closeButton = document.querySelector('.booking-modal__close');
+
+        function openModal() {
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        openButtons.forEach(btn => {
+            btn.addEventListener('click', event => {
+                event.preventDefault();
+                openModal();
+            });
+        });
+
+        closeButton.addEventListener('click', closeModal);
+        modal.addEventListener('click', event => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        const bookingForm = document.querySelector('.booking-form');
+        bookingForm.addEventListener('submit', event => {
+            event.preventDefault();
+            // Here you could send the booking data to a server.
+            // For now we just close the modal.
+            closeModal();
+        });
+    </script>
 </body>
 </html>

@@ -1,17 +1,45 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+ 
+  font-family: 'Times New Roman', Times, serif;
 }
 footer{
-   background-color:#ececec ;
+  background-color: rgb(28, 28, 42);
+  padding: 6rem, 5rem, 3rem;
+  height: 250px;
+  color: white;
 }
-footer.container{
-    display: flex;
-    justify-content: space-around;
-    margin: 100%;
-    width: 360%;
-    height: 250%;
-    padding: 50px;
-    min-height: 100vh;
+#grid{
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top:0rem;
+  padding-bottom: 3rem;
+  border-color: 1px solid rgb(28, 28, 42);
+}
+#contact{
+  display:block;
+  height: 50px;
+  width: 80px;
+}
+#services{
+  display: flex;
+  flex-direction: column;
+  text-align: flex-start;
+}
+
+#quicklinks{
+  display: flex;
+  flex-direction: column;
+  text-align: flex-start;
+}
+
+#about{
+  display: flex;
+  flex-direction: column;
+  text-align: flex-start;
 }
