@@ -10,7 +10,6 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
 }
 
 main{
@@ -62,19 +61,4 @@ h1{
     padding: 8px;
     border-radius: 8px;
 }
-/* responsive design */
-@media (max-width:768px){
-    body {
-        padding: 20px;
-    }
-    main {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-    .image-container {
-        display: none;
-    }
-    form{
-        width: 100%;
-    }
-}
+

@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     background-color:#ececec ;
@@ -54,22 +59,4 @@ h1{
     color: #ffffff;
     padding: 12px;
     border-radius: 8px;
-}
-/* responsive design */
-@media(max-width:768px){
-body{
-    padding: 20px;
-}
-main{
-    grid-template-columns: 1fr;
-    width: 100%;
-}
-
-.image-container {
-    display: none;
-}
-
-form{
-    width: 100%;
-}
 }
