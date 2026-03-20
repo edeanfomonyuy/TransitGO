@@ -1,22 +1,89 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background-color: rgb(245, 49, 49);
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f7fb;
+    color: #2a2a2a;
 }
-main{
-    background-color: rgb(175, 174, 174);
-margin: 330px;
-height: 100%;
-width: 100%;
-max-width: 500px;
-display: block;
-padding: 60px;
-border-radius: 10px;
-border: 5px black solid;
+header {
+    background-color: #1f1f40;
+    color: #fff;
+    padding: 1rem 2rem;
 }
-img{
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.about-main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+.about-hero {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.about-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-bottom: 1.5rem;
 }
+.about-hero h1 {
+    font-size: 2rem;
+    color: #3f1375;
+    margin-bottom: 0.75rem;
+}
+.about-hero p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+.about-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+}
+.about-content h2 {
+    color: #3f1375;
+    margin-bottom: 0.8rem;
+}
+.about-content p {
+    line-height: 1.7;
+}
+@media (max-width: 780px) {
+    .about-main {
+        padding: 1rem;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    header ul {
+        gap: 1rem;
+    }
+}
+
