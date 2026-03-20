@@ -5,9 +5,7 @@
 }
 
 header{
-    background-color:white;
-    position: fixed;
-    left: 0px;
+    background-color: rgb(28, 4, 71);
     top: 0;
     height: 10vh;
     width: 100%;
@@ -20,17 +18,29 @@ header{
     display: none;
 }
 
-.logo span{
-    color: green;
-}
-
-
-.desktop-nav nav ul{
+nav{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 28px;
-    list-style: none;
+    justify-content: space-between;
+    padding: 0px 20px;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+nav .logo p{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-transform: none;
+    letter-spacing: normal;
+    cursor: pointer;
+    margin: 0;
+}
+nav ul{
+    display: flex;
+    gap: 0.5rem;
 }
 
 .mobile-nav nav ul{
@@ -44,76 +54,8 @@ header{
 
 nav li a{
     text-transform: none;
-    color: black;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-nav button{
-    background-color: green;
-    border: none;
-    font-size: 15px;
-    color: #fff;
-    padding: 1.5vh 20px;
-    border-radius: 25px;
-    cursor: pointer;
-}
-nav button:hover{
-    background-color: #fff;
-    color: green;
-    transition: .3s;
-}
-
-/* The dropdown container */
-.dropdown {
-    position: relative;
-  }
-  
-  /* Dropdown button */
-  .dropdown .dropbtn {
-    outline: none;
-    padding: 12px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; 
-    border: 1px solid #222222;
-    border-radius: 4px;/* Important for vertical align on mobile phones */
-  }
-
-  .bar{
-    height: 3px;
-    width: 25px;
-    margin-bottom: 5px;
-    border-radius: 4px;
-    background-color: #222222;
-  }
-
-  .bar:last-child{
-    margin-bottom: 0;
-  }
-  
-  /* Add a red background color to navbar links on hover */
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #ececec;
-  }
-  
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
-    top: 100%;
-    right: 0;
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
+    padding: 0px 30px;
+    color: white;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -154,4 +96,125 @@ nav button:hover{
         padding: 12px 24px;
         border-radius: 8px;
 }
+nav li a:hover{
+    color: blue;
+    transition: 0.4s ease 0s;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.signin-btn,
+.signup-btn {
+    padding: 0.2rem 0.6rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.signin-btn {
+    color: #28a745;
+    border-color: #28a745;
+    background-color: transparent;
+}
+
+.signin-btn:hover {
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.signup-btn {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+    border-color: #218838;
+    box-shadow: 0 4px 12px rgba(33, 136, 56, 0.3);
+}
+
+.header-search {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.header-search input {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.header-search input:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.header-search button {
+    padding: 0.4rem 0.8rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.header-search button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0.8rem 20px;
+        gap: 1rem;
+    }
+    
+    nav .logo p {
+        margin-bottom: 0;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    nav li a {
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+    
+    .auth-buttons {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+    
+    .header-search {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .header-search input {
+        flex: 1;
+        min-width: 120px;
+    }
 }
