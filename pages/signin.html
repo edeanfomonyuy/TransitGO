@@ -10,39 +10,60 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <p>TransitGo</p>
-            </div>
-            <ul>
-                <li><a href="home page">Home</a></li>
-                <li><a href="about.html">About Us</a></li> 
-                <li><a href="contact.html">Contact Us</a></li>          
-            </ul>
-        </nav>
+        <div class="logo">
+            <h1>Transit<span>Go</span></h1>
+        </div>
+
+        <div class="dropdown mobile-nav">
+            <button class="dropbtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <nav class="dropdown-content">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li> 
+                    <li><a href="contact.html">Contact Us</a></li>  
+                    <a href="#"><button>SignIn</button></a> 
+                </ul>
+            </nav>
+        </div>
+
+        <divn class="desktop-nav">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li> 
+                    <li><a href="contact.html">Contact Us</a></li>  
+                    <a href="#"><button>SignIn</button></a>        
+                </ul>
+            </nav>   
+        </div>
+
     </header>
     <main>
         <div class="image-container">
             <img src="../assets/images/image13.jpg" alt="Bus images" />
         </div>
         <form action="">
-            <h1>Sign In Form</h1>
+            <h1>Sign In</h1>
             <div class="input-group">
-                <label for="email"></label>
-                <input id="email" type="email" placeholder="Email address">
+                <input id="email" type="email" placeholder="Enter Email Address" required>
             </div>
             <div class="input-group">
-                <label for="password"></label>
-                <input id="password" type="password" placeholder="Password">
+                <input id="password" type="password" placeholder="Enter Password" required>
             </div>
             <div class="checkbox-group">
-                <input id="terms-conditions" type="checkbox" >
-                <label for="terms-conditions">Agree Terms & Conditions</label>
+                <input id="terms-conditions" type="checkbox"> Agree Terms & Conditions
+                <!-- <label for="terms-conditions"></label> -->
             </div>
     
             <button type="submit" class="submit-btn">Sign In</button>
+            <div class="register-link">
+                <p>Don't have an account?<a href="signup.html"> SignUp</a></p>
+            </div>
         </form>
-    </main>
-    
+    </main>    
 </body>
 </html>
