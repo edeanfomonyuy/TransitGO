@@ -19,6 +19,14 @@
                 <li><a href="pages/about.html">About Us</a></li> 
                 <li><a href="pages/contact.html">Contact Us</a></li>          
             </ul>
+            <div class="auth-buttons">
+                <a href="pages/signin.html" class="signin-btn">Sign In</a>
+                <a href="pages/signup.html" class="signup-btn">Sign Up</a>
+            </div>
+            <div class="header-search">
+                <input type="search" placeholder="Search agency...">
+                <button type="submit">Search</button>
+            </div>
         </nav>
        
     </header>
@@ -29,12 +37,10 @@
             <div class="pic-bar">
                 <div class="head image">
                     <img src="assets/images/image11.jpg" alt="bus">
-                    <span class="search-bar">
-                        <search>
-                            <input type="search" placeholder="Search agency...">
-                            <button type="submit">search</button>
-                            </search>
-                    </span>
+                    <div class="hero-text">
+                        <h1>TransitGO</h1>
+                        <p>Your Journey, Our Priority</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,7 +57,85 @@
                             <span class="icon"></span>
                             <span>Douala Bonaberie</span>
                         </div>
-                        <h2>Guarantee Express</h2>
+
+<h2>Guarantee Express</h2>
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span>Departure time:</span>
+                                <span>10:00pm</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Bus Type:</span>
+                                <span>VIP</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h2>10,000FCFA</h2>
+                            <a href="" class="book-now-btn">
+                                Book Now →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/image3.jpg" alt="">
+                        <span class="card-badge">Available</span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="icon"></span>
+                            <span>Douala Bonaberie</span>
+                        </div>
+
+<h2>Guarantee Express</h2>
+                        <div class="card-info">
+                            <div class="info-item">
+                                <span>Departure time:</span>
+                                <span>10:00pm</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Bus Type:</span>
+                                <span>VIP</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h2>10,000FCFA</h2>
+                            <a href="" class="book-now-btn">
+                                Book Now →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/image3.jpg" alt="">
+                        <span class="card-badge">Available</span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span class="icon"></span>
+                            <span>Douala Bonaberie</span>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <h2>Guarantee Express</h2>
                         <div class="card-info">
                             <div class="info-item">
                                 <span>Departure time:</span>
@@ -285,5 +369,104 @@
 </div> 
     </footer>   
     
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Your Booking</h2>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="depDate">Departure Date *</label>
+                    <input type="date" id="depDate" name="depDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="seats">Number of Seats *</label>
+                    <input type="number" id="seats" name="seats" min="1" max="10" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="seatPreference">Seat Preference</label>
+                    <select id="seatPreference" name="seatPreference">
+                        <option value="">Select Preference</option>
+                        <option value="window">Window</option>
+                        <option value="aisle">Aisle</option>
+                        <option value="middle">Middle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests?"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Complete Booking</button>
+                    <button type="button" class="cancel-btn" onclick="closeBookingModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("bookingModal");
+        const closeBtn = document.querySelector(".close");
+        const bookingForm = document.getElementById("bookingForm");
+        const bookNowBtns = document.querySelectorAll(".book-now-btn");
+
+        // Open modal when any Book Now button is clicked
+        bookNowBtns.forEach(btn => {
+            btn.addEventListener("click", function(e) {
+                e.preventDefault();
+                openBookingModal();
+            });
+        });
+
+        // Open modal function
+        function openBookingModal() {
+            modal.style.display = "block";
+        }
+
+        // Close modal function
+        function closeBookingModal() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when X is clicked
+        closeBtn.addEventListener("click", closeBookingModal);
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                closeBookingModal();
+            }
+        });
+
+        // Handle form submission
+        bookingForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const formData = {
+                fullName: document.getElementById("fullName").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                depDate: document.getElementById("depDate").value,
+                seats: document.getElementById("seats").value,
+                seatPreference: document.getElementById("seatPreference").value,
+                specialRequests: document.getElementById("specialRequests").value
+            };
+            console.log("Booking Details:", formData);
+            alert(`Booking confirmed for ${formData.fullName}! Check console for details.`);
+            bookingForm.reset();
+            closeBookingModal();
+        });
+    </script>
 </body>
 </html>

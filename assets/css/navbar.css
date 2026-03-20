@@ -5,7 +5,7 @@
 }
 
 header{
-    background-color: white;
+    background-color: rgb(28, 4, 71);
     top: 0;
     left: 0;
     z-index: 1000;
@@ -18,23 +18,25 @@ nav{
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    height: 75px;
-    line-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0px 20px;
-    text-align: top; 
-    
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 nav .logo p{
     font-size: 30px;
     font-weight: bold;
-    float: left;
-    color: black;
+    color: white;
     text-transform: none;
     letter-spacing: normal;
     cursor: pointer;
+    margin: 0;
 }
 nav ul{
-    float: right;
+    display: flex;
+    gap: 0.5rem;
 }
 nav li{
     display: inline-block;
@@ -44,10 +46,128 @@ nav li a{
     font-size: 18px;
     text-transform: none;
     padding: 0px 30px;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 nav li a:hover{
     color: blue;
     transition: 0.4s ease 0s;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.signin-btn,
+.signup-btn {
+    padding: 0.2rem 0.6rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.signin-btn {
+    color: #28a745;
+    border-color: #28a745;
+    background-color: transparent;
+}
+
+.signin-btn:hover {
+    background-color: #28a745;
+    color: white;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.signup-btn {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+    border-color: #218838;
+    box-shadow: 0 4px 12px rgba(33, 136, 56, 0.3);
+}
+
+.header-search {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.header-search input {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 150px;
+}
+
+.header-search input:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.header-search button {
+    padding: 0.4rem 0.8rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.header-search button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0.8rem 20px;
+        gap: 1rem;
+    }
+    
+    nav .logo p {
+        margin-bottom: 0;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    nav li a {
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+    
+    .auth-buttons {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+    
+    .header-search {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .header-search input {
+        flex: 1;
+        min-width: 120px;
+    }
 }
