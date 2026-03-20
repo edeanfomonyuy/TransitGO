@@ -180,6 +180,7 @@ nav li a:hover{
 .header-search button:hover {
     background-color: #218838;
 }
+}
 
 @media (max-width: 768px) {
     nav {
